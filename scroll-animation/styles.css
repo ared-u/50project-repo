@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: hidden;
+}
+
+.card {
+    padding: 80px 100px;
+    background-color: rgb(85,129,176);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.card.animate {
+    transform: translateX(5000px);
+    transition: transform 0.5s ease;
+}
+.card.animate:nth-of-type(even) {
+    transform: translateX(-5000px);
+    transition: transform 0.5s ease;
+}
+
+.card.animate.enabled {
+    transform: translateX(0);
+}
