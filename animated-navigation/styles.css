@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgb(236,250,254) 50%, rgb(97,143,242) 50%);
+    font-family: 'Muli', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+.nav-bar {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px 16px;
+    height: 60px;
+    width: 70px;
+    border-radius: 3px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: width 0.5s ease;
+}
+
+.nav-bar.active {
+    width: 350px;
+}
+
+ul {
+    display: flex; 
+    align-items: center;
+    flex: 1; 
+    list-style-type: none;
+    padding-left: 0;
+    margin-right: 10px;
+    width: 0;
+    transition: width 0.5s linear;
+}
+
+.nav-bar.active ul {
+    width: 100%;
+}
+
+li {
+    padding: 0px 10px;
+    transform: rotateY(0deg);
+    opacity: 0;
+    transition: transform 0.5s linear, opacity 0.2s linear;
+}
+
+.nav-bar.active li {
+    opacity: 1;
+    transform: rotateY(360deg);
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.btn {
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: none;
+}
+
+.line {
+    position: absolute;
+    width: 22px;
+    height: 2.5px;
+    background-color: rgb(97,143,242);
+    transform-origin: center;
+    transition: transform 1s ease
+}
+
+
+.line.left {
+    transform: rotate(720deg);
+    top: 15px;
+    left: -2px;
+}
+
+.line.right {
+    transform: rotate(720deg);
+    top: 25px;
+    left: -2px;
+}
+
+.nav-bar.active .line.left {
+    transform: rotate(45deg);
+    top: 20px;
+    left: 0;
+}
+
+.nav-bar.active .line.right {
+    transform: rotate(-45deg);
+    top: 20px;
+    left: 0;
+}
