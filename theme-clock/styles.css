@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+
+:root {
+    --bg-color: #fff;
+    --dark: #000;
+    --light: #fff;
+
+}
+
+* {
+    box-sizing: border-box;
+    transition: all 0.5s ease-in;
+}
+
+
+html.dark {
+    --bg-color: #111;
+    --dark: #fff;
+    --light: #000;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--light);
+    color: var(--dark);
+    font-family: 'Heebo', sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.toggle {
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 0;
+    color: var(--light);
+    cursor: pointer;
+    background-color: var(--dark);
+    margin-top: -120px;
+    margin-bottom: 100px;
+}
+
+.clock-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.hand {
+    position: absolute;
+    width: 3px;
+    background-color: var(--dark); 
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center; 
+}
+
+.hand.hour {
+    height: 65px; 
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.hand.minute {
+    height: 100px; 
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.hand.seconds {
+    height: 100px; 
+    background-color: #e74c3c;;
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.center {
+    background-color: var(--dark);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid #e74c3c;
+}
+
+.time {
+    font-size: 60px;
+    transition: none;
+}
+
+.date {
+    color:  #aaa;
+    text-transform: uppercase;
+    font-size: 14px;
+    
+}
+
+span {
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 50%;
+    padding: 1px 2px;
+    font-size: 12px;
+    text-align: center;
+    height: 5px;
+}
