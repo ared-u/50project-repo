@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+.btn {
+    background-color: rgb(116,21,124);
+    color: #fff;
+    border: 0;
+    padding: 20px 30px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+}
+
+.ripple {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    transform: translate(-50%, -50%) scale(0);
+    animation: enlargen 0.5s ease;
+    position: absolute;
+}
+
+@keyframes enlargen {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
