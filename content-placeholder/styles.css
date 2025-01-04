@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(237, 240, 241);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Card container */
+.card-container {
+    background-color: #fff;
+    height: 450px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Header */
+.card-header {
+    height: 220px;
+    width: 100%;
+}
+
+.card-header img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card-header span {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Content */
+.card-content {
+    padding: 30px;
+}
+
+.card-title {
+    margin-bottom: 40px;
+}
+
+.card-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Placeholder spans */
+span {
+    display: block;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+}
+
+/* Author section */
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 30px;
+}
+
+.author-picture {
+    height: 38px;
+    width: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.author-picture img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.author-picture span {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.author-name, .author-date {
+    width: 100px;
+}
+
+/* Animation */
+.animated {
+    background: linear-gradient(90deg, #eaeaea 25%, #f6f6f6 50%, #eaeaea 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+
+/* Content Styling */
+
+p {
+    color: gray
+}
+
+small {
+    color: #aaa;
+}
