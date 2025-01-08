@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2a2a72;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    overflow: hidden;
+}
+
+.user-form {
+    width: 100%;
+    max-width: 750px;
+}
+
+.user-form input {
+    width: 100%;
+    background-color: #4c2885;
+    padding: 20px;
+    border-radius: 20px;
+    border: 0;
+    font-family: inherit;
+    font-size: 1.1rem;
+    color: #fff;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.user-form input:focus {
+    outline: none;
+}
+
+main {
+    padding: 60px;
+    background-color: #4c2885;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: none;
+    gap: 40px;
+}
+
+main .user-img {
+    border-radius: 50%;
+    background-color: #fff;
+    width: 180px;
+    height: 180px;
+    border: 12px solid #2a2a72;
+}
+
+main .user-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%; 
+}
+
+main .user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+main .user-info h1 {
+    margin: 0;
+}
+
+main .user-info p {
+    font-size: 18px;
+}
+
+main .user-info .user-stats span {
+    margin-right: 20px;
+}
+
+main .user-info .user-projects {
+    margin-top: 15px;
+    display: flex;
+    max-width: 600px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+main .user-info .user-projects .repo {
+    background-color: #2a2a72;
+    padding: 5px;
+    font-size: 0.9rem
+}
+
+main .user-info .user-projects .repo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.error {
+    font-size: 40px;
+}
+
+.active {
+    display: flex;
+}
